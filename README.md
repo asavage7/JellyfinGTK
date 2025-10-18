@@ -16,6 +16,8 @@
 - [ ] Implement player controls such as repeat, shuffle, seek, etc.
 - [ ] General UI improvements
 
+**Many other features are planned, but not in progress currently.**
+
 # Screenshots
 
 ### Albums View
