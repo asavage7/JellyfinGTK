@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.1 -->
+<!-- GTK4 + libadwaita UI definition for the main window (root object) -->
+<interface>
+  <!-- interface-name window.ui -->
+  <requires lib="adw" version="1.0"/>
+  <requires lib="gio" version="2.0"/>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.4"/>
+  <object class="AdwApplicationWindow" id="main_window">
+    <property name="default-height">600</property>
+    <property name="default-width">900</property>
+    <property name="title">Jellyfin GTK Music</property>
+    <child>
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="show-end-title-buttons">true</property>
+            <property name="title-widget">
+              <object class="AdwViewSwitcher">
+                <property name="stack">main_stack</property>
+              </object>
+            </property>
+            <child type="end">
+              <object class="GtkMenuButton" id="sort_menu_btn">
+                <property name="icon-name">view-sort-descending-symbolic</property>
+                <property name="menu-model">sort_menu</property>
+                <property name="tooltip-text">Sort</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwViewStack" id="main_stack">
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="spacing">0</property>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="hscrollbar-policy">never</property>
+                        <property name="max-content-width">280</property>
+                        <property name="min-content-width">220</property>
+                        <child>
+                          <object class="GtkListBox" id="library_sidebar">
+                            <property name="selection-mode">single</property>
+                            <child>
+                              <object class="GtkListBoxRow" id="row_albums">
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="margin-bottom">8</property>
+                                    <property name="margin-end">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-top">8</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Albums</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBoxRow" id="row_tracks">
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="margin-bottom">8</property>
+                                    <property name="margin-end">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-top">8</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Tracks</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBoxRow" id="row_artists">
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="margin-bottom">8</property>
+                                    <property name="margin-end">12</property>
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-top">8</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Artists</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStack" id="library_stack">
+                        <property name="hexpand">true</property>
+                        <property name="vexpand">true</property>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="child">
+                              <object class="GtkScrolledWindow">
+                                <property name="hscrollbar-policy">never</property>
+                                <child>
+                                  <object class="GtkFlowBox" id="albums_flow">
+                                    <property name="column-spacing">16</property>
+                                    <property name="homogeneous">true</property>
+                                    <property name="min-children-per-line">4</property>
+                                    <property name="row-spacing">16</property>
+                                    <property name="selection-mode">none</property>
+                                    <property name="valign">start</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                            <property name="name">albums</property>
+                            <property name="title">Albums</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="child">
+                              <object class="GtkScrolledWindow">
+                                <property name="hscrollbar-policy">never</property>
+                                <child>
+                                  <object class="GtkListBox" id="tracks_list">
+                                    <property name="selection-mode">none</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                            <property name="name">tracks</property>
+                            <property name="title">Tracks</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="child">
+                              <object class="GtkScrolledWindow">
+                                <property name="hscrollbar-policy">never</property>
+                                <child>
+                                  <object class="GtkListBox" id="artists_list">
+                                    <property name="selection-mode">none</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                            <property name="name">artists</property>
+                            <property name="title">Artists</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="icon-name">view-grid-symbolic</property>
+                <property name="name">library</property>
+                <property name="title">Library</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="spacing">12</property>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="hscrollbar-policy">never</property>
+                        <property name="max-content-width">340</property>
+                        <property name="min-content-width">260</property>
+                        <child>
+                          <object class="GtkListBox" id="queue_list">
+                            <property name="selection-mode">none</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="now_playing_area">
+                        <property name="margin-bottom">12</property>
+                        <property name="margin-end">12</property>
+                        <property name="margin-start">12</property>
+                        <property name="margin-top">12</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">12</property>
+                        <child>
+                          <object class="GtkImage" id="np_art">
+                            <property name="halign">center</property>
+                            <property name="icon-name">audio-x-generic-symbolic</property>
+                            <property name="pixel-size">196</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="np_title">
+                            <property name="halign">center</property>
+                            <property name="label">Title</property>
+                            <property name="xalign">0.5</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                              <attribute name="scale" value="1.2"/>
+                            </attributes>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="np_artist">
+                            <property name="halign">center</property>
+                            <property name="label">Artist</property>
+                            <property name="xalign">0.5</property>
+                            <style>
+                              <class name="dim-label"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkProgressBar" id="np_progress">
+                            <property name="hexpand">true</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="np_controls">
+                            <property name="halign">center</property>
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">8</property>
+                            <child>
+                              <object class="GtkButton" id="btn_prev">
+                                <property name="icon-name">media-skip-backward-symbolic</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_play">
+                                <property name="icon-name">media-playback-start-symbolic</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_next">
+                                <property name="icon-name">media-skip-forward-symbolic</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="icon-name">media-playback-start-symbolic</property>
+                <property name="name">now_playing</property>
+                <property name="title">Now Playing</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <!-- Sort menu model -->
+  <menu id="sort_menu">
+    <section>
+      <item>
+        <attribute name="action">app.sort.by</attribute>
+        <attribute name="label">Sort by Name</attribute>
+        <attribute name="target">Name</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort.by</attribute>
+        <attribute name="label">Sort by Artist</attribute>
+        <attribute name="target">Artist</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort.by</attribute>
+        <attribute name="label">Sort by Album</attribute>
+        <attribute name="target">Album</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort.by</attribute>
+        <attribute name="label">Sort by Duration</attribute>
+        <attribute name="target">Duration</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="action">app.sort.order</attribute>
+        <attribute name="label">Ascending</attribute>
+        <attribute name="target">Ascending</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.sort.order</attribute>
+        <attribute name="label">Descending</attribute>
+        <attribute name="target">Descending</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

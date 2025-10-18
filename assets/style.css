@@ -1,0 +1,103 @@
+/* Add rounded corners to all album art images using CSS class */
+.album-art {
+    border-radius: 8px;
+    /* Ensure the image fills the rounded container */
+    background-clip: padding-box;
+}
+
+/* Size-specific rounded corners for different contexts */
+
+/* Large album art (now playing sheet view) */
+#sheet_album_art {
+    border-radius: 16px;
+}
+
+/* Medium album art (album view and now playing bar) */
+#album_view_album_art,
+#now_playing_art {
+    border-radius: 12px;
+}
+
+/* Small album art (album tiles) */
+#album_tile_art {
+    border-radius: 10px;
+}
+
+/* Tiny album art (track rows and queue items) */
+#track_row_art,
+#queue_row_icon {
+    border-radius: 6px;
+}
+
+/* Alternative: If you want to override with ID selectors */
+/* Add rounded corners to images */
+#now_playing_art, #sheet_album_art, #album_art, #artist_image {
+    border-radius: 8px;
+}
+
+/* Blurred background for now playing sheet */
+.blurred-background {
+    filter: blur(30px) brightness(0.7);
+    opacity: 0.8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1); /* Slightly scale up to hide blur edges */
+}
+
+/* Dynamic gradient background for now playing sheet */
+.album_art_overlay {
+    /* CSS variables for dynamic colors (four corners) */
+    --gradient-color-1: rgba(100,50,150,0.8);
+    --gradient-color-2: rgba(50,100,200,0.6);
+    --gradient-color-3: rgba(50,200,150,0.65);
+    --gradient-color-4: rgba(20,20,40,0.9);
+    /* Use var(...) to reference CSS variables. Provide simple linear gradient fallback if variables aren't set. */
+    /* Diagonal gradient for a more pleasing visual flow */
+    background-image: linear-gradient(135deg, var(--gradient-color-1, rgba(100,50,150,0.85)) 0%, var(--gradient-color-2, rgba(50,100,200,0.65)) 30%, var(--gradient-color-3, rgba(50,200,150,0.7)) 70%, var(--gradient-color-4, rgba(20,20,40,0.95)) 100%);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.now_playing_sidebar {
+    background-color: rgba(0,0,0,0.1); /* Semi-transparent background */
+}
+
+.no_background {
+    /* Forcefully remove background and any background images/shadows so widgets marked
+       with this helper class render transparent. The !important is necessary because
+       theme or widget-level rules may otherwise override this. */
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Be explicit for container widgets used in the queue/sidebar so their backgrounds
+   are transparent as well. */
+.AdwNavigationPage.no_background,
+.AdwToolbarView.no_background,
+.GtkScrolledWindow.no_background,
+.GtkListBox.no_background,
+.navigation-sidebar.no_background {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Strong, id-targeted overrides for the queue/sidebar widgets */
+#now_playing_sidebar,
+#queue_scrolled_window,
+#queue_list_box {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Clear any 'background' helper class inside the now playing sidebar specifically */
+#now_playing_sidebar .background {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}

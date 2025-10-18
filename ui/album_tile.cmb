@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
+<!-- Created with Cambalache 0.96.1 -->
+<cambalache-project version="0.96.0" target_tk="gtk-4.0">
+  <ui filename="album_tile.ui" sha256="0664804e412ec8994c72ce52471476b09aa8c0f0af9623e675353ba16316b875"/>
+</cambalache-project>

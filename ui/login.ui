@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="adw" version="1.0"/>
+
+  <object class="AdwWindow" id="login_window">
+    <property name="default-width">420</property>
+    <property name="default-height">320</property>
+    <property name="modal">true</property>
+    <property name="title">Sign in to Jellyfin</property>
+    <child>
+      <object class="AdwToolbarView">
+        <child>
+          <object class="AdwClamp">
+            <property name="maximum-size">420</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">12</property>
+                <property name="margin-start">18</property>
+                <property name="margin-end">18</property>
+                <property name="margin-top">18</property>
+                <property name="margin-bottom">18</property>
+
+                <child>
+                  <object class="GtkEntry" id="entry_server">
+                    <property name="placeholder-text">Server URL (e.g., https://jellyfin.local:8096)</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="entry_username">
+                    <property name="placeholder-text">Username</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkPasswordEntry" id="entry_password">
+                    <property name="placeholder-text">Password</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_login">
+                    <property name="label">Sign In</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="login_error">
+                    <property name="visible">false</property>
+                    <style>
+                      <class name="error"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

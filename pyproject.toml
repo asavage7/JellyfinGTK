@@ -1,0 +1,20 @@
+[project]
+name = "jellyfin-gtk"
+version = "0.1.0"
+description = "Minimal GTK4 + libadwaita music app scaffold"
+authors = [{ name = "Alex" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyGObject>=3.44",
+  # libadwaita is provided via GI (gir1.2-adw-1) on most Linux distros.
+]
+
+[project.urls]
+homepage = "https://example.com"
+
+[tool.setuptools]
+py-modules = []
+
+[tool.black]
+line-length = 100

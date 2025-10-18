@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.96.1 -->
+<interface>
+  <!-- interface-name track_row.ui -->
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkCenterBox" id="track_row_box">
+    <property name="margin-bottom">8</property>
+    <property name="margin-end">8</property>
+    <property name="margin-start">8</property>
+    <property name="margin-top">8</property>
+    <child type="start">
+      <object class="GtkBox">
+        <property name="orientation">horizontal</property>
+        <property name="spacing">12</property>
+        <child>
+          <object class="GtkLabel" id="track_row_number">
+            <property name="css-classes">dim-label</property>
+            <property name="label">0000</property>
+            <property name="width-request">40</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="track_row_art">
+            <property name="css-classes">album-art</property>
+            <property name="height-request">42</property>
+            <property name="icon-name">dialog-question</property>
+            <property name="pixel-size">40</property>
+            <property name="width-request">42</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="halign">start</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+            <child>
+              <object class="GtkLabel" id="track_row_title">
+                <property name="ellipsize">end</property>
+                <property name="halign">start</property>
+                <property name="label">Unknown Title</property>
+                <property name="max-width-chars">32</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="track_row_artist">
+                <property name="css-classes">dim-label</property>
+                <property name="ellipsize">end</property>
+                <property name="halign">start</property>
+                <property name="label">Unknown Artist</property>
+                <property name="max-width-chars">32</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child type="end">
+      <object class="GtkBox">
+        <property name="spacing">48</property>
+        <child type="center">
+          <object class="GtkLabel" id="track_row_album">
+            <property name="ellipsize">end</property>
+            <property name="halign">end</property>
+            <property name="justify">right</property>
+            <property name="label">Unknown Album</property>
+            <property name="max-width-chars">32</property>
+          </object>
+        </child>
+        <child type="end">
+          <object class="GtkLabel" id="track_row_duration">
+            <property name="css-classes">dim-label</property>
+            <property name="label">0:00:00</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

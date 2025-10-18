@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkBox" id="track_row_box">
+    <property name="orientation">horizontal</property>
+    <property name="spacing">12</property>
+    <property name="margin-top">8</property>
+    <property name="margin-bottom">8</property>
+    <property name="margin-start">12</property>
+    <property name="margin-end">12</property>
+    <child>
+      <object class="GtkLabel" id="track_row_number">
+        <property name="css-classes">dim-label</property>
+        <property name="width-request">30</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="track_row_title">
+        <property name="ellipsize">end</property>
+        <property name="hexpand">True</property>
+        <property name="halign">start</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="track_row_duration">
+        <property name="css-classes">dim-label</property>
+      </object>
+    </child>
+  </object>
+</interface>

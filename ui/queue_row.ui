@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkBox" id="queue_row_box">
+    <property name="orientation">horizontal</property>
+    <property name="spacing">8</property>
+    <property name="margin-start">4</property>
+    <property name="margin-end">4</property>
+    <property name="margin-top">8</property>
+    <property name="margin-bottom">8</property>
+    <child>
+      <object class="GtkLabel" id="queue_row_index">
+        <property name="css-classes">dim-label</property>
+        <property name="width-request">24</property>
+        <property name="halign">center</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImage" id="queue_row_icon">
+        <property name="css-classes">album-art</property>
+        <property name="icon-name">audio-x-generic</property>
+        <property name="pixel-size">32</property>
+        <property name="width-request">32</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="queue_row_info_box">
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <property name="hexpand">True</property>
+        <property name="margin-start">4</property>
+        <property name="margin-end">4</property>
+        <child>
+          <object class="GtkLabel" id="queue_row_title">
+            <property name="halign">start</property>
+            <property name="ellipsize">end</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="queue_row_artist">
+            <property name="halign">start</property>
+            <property name="ellipsize">end</property>
+            <property name="css-classes">dim-label</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="queue_row_duration">
+        <property name="css-classes">dim-label</property>
+      </object>
+    </child>
+  </object>
+</interface>
