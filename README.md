@@ -9,12 +9,12 @@
 - [x] Add/Remove songs from queue.
 
 ## In Development
-- [] View artist data
-- [] Play songs from tracks view
-- [] Sort pages by track/album name, artist, release year, etc.
-- [] Better queue management (drag and drop)
-- [] Implement player controls such as repeat, shuffle, seek, etc.
-- [] General UI improvements
+- [ ] View artist data
+- [ ] Play songs from tracks view
+- [ ] Sort pages by track/album name, artist, release year, etc.
+- [ ] Better queue management (drag and drop)
+- [ ] Implement player controls such as repeat, shuffle, seek, etc.
+- [ ] General UI improvements
 
 # Screenshots
 
