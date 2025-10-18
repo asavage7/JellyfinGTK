@@ -2,6 +2,20 @@
 ### A Simple GTK4/Libadwaita Jellyfin music player written in Python.
 **This project is not affiliated with or endorsed by Jellyfin.**
 
+## Current Features
+- [x] Fetch library data from Jellyfin
+- [x] View albums, album details, and individual tracks
+- [x] Play/Shuffle an album or a specific song from an album
+- [x] Add/Remove songs from queue.
+
+## In Development
+- [] View artist data
+- [] Play songs from tracks view
+- [] Sort pages by track/album name, artist, release year, etc.
+- [] Better queue management (drag and drop)
+- [] Implement player controls such as repeat, shuffle, seek, etc.
+- [] General UI improvements
+
 # Screenshots
 
 ### Albums View
