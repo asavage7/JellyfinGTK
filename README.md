@@ -1,3 +1,5 @@
+**NOTE: This project is in early stages of devleopment. Many features do not work as intended.**
+
 # JellyfinGTK
 ### A Simple GTK4/Libadwaita Jellyfin music player written in Python.
 **This project is not affiliated with or endorsed by Jellyfin.**
