@@ -5,10 +5,10 @@
 # Screenshots
 
 ### Albums View
-![Albums View](https://raw.githubusercontent.com/asavage7/JellyfinGTK/refs/heads/main/assets/screenshots/albums_view.png)
+![Albums View](https://github.com/asavage7/JellyfinGTK/blob/main/assets/screenshots/albums_view.png?raw=true)
 
 ### Album Details View
-![Albums View](https://raw.githubusercontent.com/asavage7/JellyfinGTK/refs/heads/main/assets/screenshots/album_info_view.png)
+![Album Details View](https://github.com/asavage7/JellyfinGTK/blob/main/assets/screenshots/album_info_view.png?raw=true)
 
 ### Now Playing Panel
-![Albums View](https://raw.githubusercontent.com/asavage7/JellyfinGTK/refs/heads/main/assets/screenshots/now_playing_view.png)
+![Now Playing Panel](https://github.com/asavage7/JellyfinGTK/blob/main/assets/screenshots/now_playing_view.png?raw=true)
